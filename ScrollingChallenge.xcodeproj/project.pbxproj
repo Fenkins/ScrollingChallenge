@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AADD012A1BC00FED00069573 /* TileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = AADD01291BC00FED00069573 /* TileNode.m */; settings = {ASSET_TAGS = (); }; };
 		AAFA04851BBED34C00AEC404 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFA04841BBED34C00AEC404 /* main.m */; };
 		AAFA04881BBED34C00AEC404 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFA04871BBED34C00AEC404 /* AppDelegate.m */; };
 		AAFA048B1BBED34C00AEC404 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFA048A1BBED34C00AEC404 /* GameScene.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AADD01281BC00FED00069573 /* TileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileNode.h; sourceTree = "<group>"; };
+		AADD01291BC00FED00069573 /* TileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileNode.m; sourceTree = "<group>"; };
 		AAFA04801BBED34C00AEC404 /* ScrollingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFA04841BBED34C00AEC404 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AAFA04861BBED34C00AEC404 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 				AAFA048C1BBED34C00AEC404 /* GameScene.sks */,
 				AAFA048E1BBED34C00AEC404 /* GameViewController.h */,
 				AAFA048F1BBED34C00AEC404 /* GameViewController.m */,
+				AADD01281BC00FED00069573 /* TileNode.h */,
+				AADD01291BC00FED00069573 /* TileNode.m */,
 				AAFA04911BBED34C00AEC404 /* Main.storyboard */,
 				AAFA04941BBED34C00AEC404 /* Assets.xcassets */,
 				AAFA04961BBED34C00AEC404 /* LaunchScreen.storyboard */,
@@ -164,6 +169,7 @@
 			files = (
 				AAFA04901BBED34C00AEC404 /* GameViewController.m in Sources */,
 				AAFA04881BBED34C00AEC404 /* AppDelegate.m in Sources */,
+				AADD012A1BC00FED00069573 /* TileNode.m in Sources */,
 				AAFA048B1BBED34C00AEC404 /* GameScene.m in Sources */,
 				AAFA04851BBED34C00AEC404 /* main.m in Sources */,
 			);
@@ -312,6 +318,7 @@
 				AAFA049E1BBED34C00AEC404 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
