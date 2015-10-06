@@ -19,7 +19,7 @@ static const CGFloat kScrollSpeed = 70.0;
 
 -(void)didMoveToView:(SKView *)view {
     /* Setup your scene here */
-    self.backgroundColor = [SKColor colorWithRed:0.0 green:0.6 blue:1.0 alpha:1.0];
+    self.backgroundColor = [SKColor colorWithRed:0.81 green:0.95 blue:0.96 alpha:1.0];
     
     _direction = -1;
     
@@ -48,9 +48,7 @@ static const CGFloat kScrollSpeed = 70.0;
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
-    for (UITouch *touch in touches) {
-        
-    }
+    _direction *= -1;
 }
 
 -(void)update:(CFTimeInterval)currentTime {
@@ -68,6 +66,19 @@ static const CGFloat kScrollSpeed = 70.0;
         tile.position = CGPointMake(tile.position.x+scrollDistance*_direction, tile.position.y);
         tile = tile.nextTile;
     } while (tile != _leftMostTile);
+    if (_direction == -1) {
+        if (_leftMostTile.position.x + _leftMostTile.size.width < 0) {
+            _leftMostTile.position = CGPointMake(_rightMostTile.position.x+_rightMostTile.size.width, _leftMostTile.position.y);
+            _rightMostTile = _leftMostTile;
+            _leftMostTile = _leftMostTile.nextTile;
+        }
+    } else {
+        if (_rightMostTile.position.x > self.size.width) {
+            _rightMostTile.position = CGPointMake(_leftMostTile.position.x-_rightMostTile.size.width, _rightMostTile.position.y);
+            _leftMostTile = _rightMostTile;
+            _rightMostTile = _rightMostTile.prevTile;
+        }
+    }
 }
 
 @end
